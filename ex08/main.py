@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 import math
 
-
+# procedure that displays the time of arrival of the train according to its speed
 def tchacatchac(a):
     v = a
-    heureD = 9
-    Dist = 170
+    dist = 170
+    hdepart = 9
     try:
-        temps = (Dist/v)
-        print(v)
-        print(Dist)
-        print('{:f}'.format(temps))
+        temps = float(dist)/float(v)
+        h = int(temps)
+        min = int(math.floor((temps-h)*60))
+        h = h + hdepart
+        print(str(v)+"km/h -> "+str(h)+":"+str(min))
     except Exception:
         raise Exception
 
