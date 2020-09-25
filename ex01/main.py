@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
             else:
                 try:
-                    #print the speed separates arguments from a line
+                    #print the speed with 1 digits after the decimal point
                     print('{:.1f}'.format(handling(temps, dist)))
                 except Exception:
                     print("ERROR")

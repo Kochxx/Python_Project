@@ -4,13 +4,13 @@ import random
 
 
 class Test(unittest.TestCase):
-    #teste la valeur 0 pour le dénominateur, puis pour le numérateur
+    #tests the value 0 for the denominator and then for the numerator.
     def testZeroDivision(self):
         print("Zero Division Test")
         self.assertEqual(main.handling(1, 0.0), 0.0)
         self.assertRaises(ZeroDivisionError, main.handling(0.0, 1.0))
 
-    #teste la valeur obtenue par la fonction handling
+    #tests the value obtained by the handling function
     def testValueVitesse(self):
         print("Value Vitesse Test")
         self.assertEqual(float('{:.1f}'.format(main.handling(7.8, 4.0))), 0.5)
