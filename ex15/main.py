@@ -1,4 +1,4 @@
-## -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import sys
 
@@ -6,7 +6,7 @@ import sys
 # define a class with the name "Vecteur2D")
 class Vecteur2D:
 
-    # init class default
+    # init class
     def __init__(self, cX = 0.0, cY = 0.0):
         self.x = cX
         self.y = cY
@@ -15,6 +15,7 @@ class Vecteur2D:
 # main function
 if __name__ == '__main__':
     try:
+        # open file
         nameFile = sys.argv[1]
         file = open(nameFile, "r")
     except FileNotFoundError:
@@ -38,8 +39,9 @@ if __name__ == '__main__':
 
             else:
                 try:
-                    # instantiation of an object of the Vecteur2D class
+                    # instantiation without paramaters
                     vecteur = Vecteur2D()
+                    # instantiation with paramaters
                     vecteur2 = Vecteur2D(x, y)
                     print("par défaut : (x=" + str(vecteur.x) + ", y=" + str(vecteur.y) + ")")
                     print("instance : (x=" + str(vecteur2.x) + ", y=" + str(vecteur2.y) + ")")
