@@ -10,7 +10,7 @@ import math
 import sys
 
 
-class ex02
+class ex02:
     def squareRoot(a):
         """
         Function that returns the square root of a float 'a' passed as parameter
