@@ -3,20 +3,30 @@ import unittest
 
 
 class Test(unittest.TestCase):
+    """
+       ..class:: Test class
 
-    # test the tchacatchac function
+    """
+
     def testTchacatchac(self):
+        """
+           ..function: Tests the tchacatchac function
+        """
         print("Test Tchacatchac()")
-        self.assertEqual(main.tchacatchac(100), "100km/h -> 10:42")
-        self.assertEqual(main.tchacatchac(200), "200km/h -> 9:51")
-        self.assertEqual(main.tchacatchac(300), "300km/h -> 9:34")
+        test1 = main.ex08()
+        self.assertEqual(test1.tchacatchac(100), "100km/h -> 10:42")
+        self.assertEqual(test1.tchacatchac(200), "200km/h -> 9:51")
+        self.assertEqual(test1.tchacatchac(300), "300km/h -> 9:34")
 
-    # test the vitesse function
     def testVitesse(self):
+        """
+           ..function: Tests the vitesse function
+        """
         print("Test Vitesse()")
-        self.assertEqual(main.vitesse()[0], "100km/h -> 10:42")
-        self.assertEqual(main.vitesse()[10], "200km/h -> 9:51")
-        self.assertEqual(main.vitesse()[15], "250km/h -> 9:40")
+        test2 = main.ex08()
+        self.assertEqual(test2.vitesse()[0], "100km/h -> 10:42")
+        self.assertEqual(test2.vitesse()[10], "200km/h -> 9:51")
+        self.assertEqual(test2.vitesse()[15], "250km/h -> 9:40")
 
 
 if __name__ == '__main__':

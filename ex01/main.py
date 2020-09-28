@@ -7,7 +7,7 @@
      Calculez et affichez la valeur de la vitesse.
      Améliorez l’affichage enimposant un chiffre après le point décimal.
 """
-# -*- coding: utf-8 -*-
+
 import sys
 
 

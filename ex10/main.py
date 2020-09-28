@@ -1,23 +1,38 @@
-# -*- coding: utf-8 -*-
+"""
+..module:: ex10
+    :synopsis:: Utilisez une liste en compréhension
+     pour ajouter 3 à chaque élément d’une liste d’entiers de 0 à 5,
+     mais seulement si l’élément est supérieur ou égal à 2
+"""
+
 import math
 import sys
 from typing import List
 
 
-# function that returns a comprehension list that adds 3
-# to each item in a list from 0 to 5
-# if the item is greater than or equal to 2
-def comprehensionList():
-    # initialisation of the comprehension list
-    listC = []
-    try:
-        # creation of the comprehension list
-        for i in range(0, 6):
-            if i >= 2:
-                listC.append(i+3)
-        return listC
-    except:
-        print("ERROR")
+class ex10:
+    """
+    ..class:: Class contains the function for the exercise 1
+
+    """
+    def comprehensionList(self):
+        """
+        ..function: Function that returns a comprehension list that adds 3
+                    to each item in a list from 0 to 5
+                    if the item is greater than or equal to 2
+
+        :return listC the comprehension list modified
+        """
+        # initialisation of the comprehension list
+        listC = []
+        try:
+            # creation of the comprehension list
+            for i in range(0, 6):
+                if i >= 2:
+                    listC.append(i+3)
+            return listC
+        except:
+            print("ERROR")
 
 
 # main function
@@ -30,7 +45,8 @@ if __name__ == '__main__':
         print("ERROR")
     else:
         try:
+            exo10 = ex10()
             # displays the comprehension list
-            print(comprehensionList())
+            print(exo10.comprehensionList())
         except Exception:
             print("ERROR")
