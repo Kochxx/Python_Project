@@ -21,6 +21,10 @@ class ex01:
         ..function: Function that calculates the speed from the time and distance
         passed as a parameter
 
+        :param a: time value
+        :param b: distance value
+
+        :return v: the speed calculated
         """
         time = a
         dist = b

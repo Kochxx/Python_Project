@@ -1,32 +1,58 @@
-# -*- coding: utf-8 -*-
+"""
+..module:: ex04
+    :synopsis:: On désire sécuriser une enceinte pressurisée.
+         On se fixe une pression seuil et un volume seuil :
+         pSeuil = 2.3, vSeuil = 7.41.
+         On demande de saisir la pression et le volume courant
+         de l’enceinte et d’écrire un script qui simule
+         le comportement suivant:a.
+         Si le volume et la pression sont supérieurs aux seuils :
+         arrêt immédiatb. Si seule la pression est supérieure
+         à la pression seuil : demander d’augmenter le volume de l’enceinte.
+         Si seul le volume est supérieur au volume seuil :
+         demander de diminuer le volume de l’enceinte.
+         Sinon déclarer que « tout va bien ».
+"""
+
 import math
 import sys
 
 
-# function that verifies the pressure and volume passed
-# in parameter according to defined thresholds and returns the instructions
-def secure(a, b):
-    # pressure threshold
-    pSeuil = 2.3
-    # volume threshold
-    vSeuil = 7.41
-    pression = a
-    volume = b
-    try:
-        # checks the pressure and the volume in relation to their threshold
-        if (pression > pSeuil) & (volume > vSeuil):
-            res = "KO"
-        else:
-            if pression > pSeuil:
-                res = "Augmenter"
+class ex04:
+    """
+    ..class:: Class contains the function for the exercise 4
+
+    """
+    def secure(self, a, b):
+        """
+        ..function:: Function that verifies the pressure and volume passed
+                     in parameter according to defined thresholds and returns the instructions
+
+        :param a: pression value
+        :param b: volume value
+        :return res: return the message "KO"/"Augmenter"/"Diminuer"/"OK"
+        """
+        # pressure threshold
+        pSeuil = 2.3
+        # volume threshold
+        vSeuil = 7.41
+        pression = a
+        volume = b
+        try:
+            # checks the pressure and the volume in relation to their threshold
+            if (pression > pSeuil) & (volume > vSeuil):
+                res = "KO"
             else:
-                if volume > vSeuil:
-                    res = "Diminuer"
+                if pression > pSeuil:
+                    res = "Augmenter"
                 else:
-                    res = "OK"
-        return res
-    except Exception :
-        print("ERROR")
+                    if volume > vSeuil:
+                        res = "Diminuer"
+                    else:
+                        res = "OK"
+            return res
+        except Exception :
+            print("ERROR")
 
 
 # main function
@@ -38,6 +64,7 @@ if __name__ == '__main__':
     except FileNotFoundError:
         print("ERROR")
     else:
+        ex4 = ex04()
         # reading file
         for lines in file.readlines():
             try:
@@ -55,7 +82,7 @@ if __name__ == '__main__':
             else:
                 try:
                     # print the instruction for the given volume and pressure
-                    print(secure(a, b))
+                    print(ex4.secure(a, b))
                 except Exception:
                     print("ERROR")
         # close file
