@@ -1,18 +1,29 @@
-# -*- coding: utf-8 -*-
+
+"""
+..module:: ex02 
+    :synopsis:: Saisissez un flottant. S’il est positif ou nul,
+     affichez sa racine, sinon affichez un message d’erreur: 
+     https://docs.python.org/3/library/math.html
+"""
+
 import math
 import sys
 
 
-# function that returns the square root of a number passed in parameter
-def squareRoot(a):
-    num = a
-    # checks if the number is not negative
-    if num < 0:
-        raise ValueError
-    else:
-        # calculate the square root
-        res = math.sqrt(num)
-        return res
+class ex02
+    def squareRoot(a):
+        """
+        Function that returns the square root of a float 'a' passed as parameter
+        """
+
+        num = a
+        # checks if the number is not negative
+        if num < 0:
+            raise ValueError
+        else:
+            # calculate the square root
+            res = math.sqrt(num)
+            return res
 
 
 # main function
