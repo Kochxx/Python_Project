@@ -5,8 +5,8 @@ import random
 
 class Test(unittest.TestCase):
     # test the value error
-    def testRaiseValueTypeError(self):
-        print("testRaiseValueTypeError")
+    def testASmallerThanB(self):
+        print("testASmallerThanB")
         self.assertRaises(ValueError, main.squareRoot, -8.5)
         print("Incorrect value => expected value none negative")
 
