@@ -1,17 +1,29 @@
-# -*- coding: utf-8 -*-
+"""
+..module:: ex14
+    :synopsis:: Définir une classe MaClasse possédant les attributs suivants :
+    – données : deux attributs de classes : x = 23 et y = x + 5.
+    – méthode : une méthode affiche contenant un attribut d’instance z = 42 et les affichages de y et de z.
+    – Dans le programme principal, instanciez un objet de la classe MaClasse et invoquez la méthode affiche.
+"""
 import math
 import sys
 
 
-# define a class with the name "MaClasse")
 class MaClasse:
+    """
+    ..class:: Class contains the function for the exercise 14
+              -> define a class with the name "MaClasse"
 
+    """
     # attributes of its Class
     x = 23
     y = x + 5
 
-    # procedure that displays the values of y and z
     def affiche(self):
+        """
+         ..function: Procedure that displays the values of y and z
+
+         """
         z = 42
         print("(" + str(self.y) + ", " + str(z) + ")")
 
