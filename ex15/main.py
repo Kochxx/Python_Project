@@ -1,13 +1,27 @@
-# -*- coding: utf-8 -*-
+"""
+..module:: ex15
+    :synopsis:: Définir une classe Vecteur2D avec un constructeur
+     fournissant les coordonnées par défaut d’un vecteur du plan
+     (par exemple : x = 0 et y = 0). Dans le programme principal,
+     instanciez un Vecteur2D sans paramètre, un Vecteur2D
+     avec ses deux paramètres, et affichez- les
+"""
 
 import sys
 
 
-# define a class with the name "Vecteur2D")
 class Vecteur2D:
+    """
+    ..class:: Class with the name "Vecteur2D"
 
+    """
     # init class
     def __init__(self, cX = 0.0, cY = 0.0):
+        """
+            ..function: Init class
+            :param cX: x coordinate
+            :param cY: y coordinate
+        """
         self.x = cX
         self.y = cY
 
