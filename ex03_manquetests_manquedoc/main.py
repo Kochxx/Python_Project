@@ -4,12 +4,14 @@ import sys
 
 # function that returns the smallest out of two words
 def smallestWord(a, b):
-    if(a==b):
-    	return a
-    elif (a<b):
-    	return a
+    firstStr = a.lower()
+    secondStr = b.lower()
+    if(firstStr == secondStr):
+    	return firstStr
+    elif (firstStr < secondStr):
+    	return firstStr
     else:
-    	return b
+    	return secondStr
 
 # main function
 if __name__ == '__main__':
