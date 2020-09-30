@@ -1,28 +1,52 @@
-# -*- coding: utf-8 -*-
+
+"""
+..module:: ex06
+    :synopsis:: Écrire une fonction cube qui retourne le cube
+     de son argument. Écrire une fonc tion volumeSphere
+     qui calcule le volume d’une sphère de rayon r fourni
+     en argument et qui utilise la fonction cube.
+     Tester la fonction volumeSphere par un appel
+     dans le programme principal décimal.
+"""
+
 import math
 import sys
 
 
-# function which returns the cube of a number passed in parameter
-def cube(a):
-    num = a
-    try:
-        # calculate the cube of the number
-        res = math.pow(num, 3)
-        return res
-    except Exception:
-        raise Exception
+class ex06:
+    """
+    ..class:: Class contains the functions for the exercise 6
 
+    """
+    def cube(self, a):
+        """
+        ..function: Function which returns the cube of a number passed in parameter
 
-# calculates the volume of a sphere of radius passed in parameter
-def vSphere(a):
-    r = a
-    try:
-        # volume sphere calculation
-        res = 4 * math.pi * cube(r)
-        return res
-    except Exception:
-        print("ERROR")
+        :param a: number to be cubed
+        :return res: return a per cube
+        """
+        num = a
+        try:
+            # calculate the cube of the number
+            res = math.pow(num, 3)
+            return res
+        except Exception:
+            raise Exception
+
+    def vSphere(self, a):
+        """
+        ..function: Function calculates the volume of a sphere of radius passed in parameter
+
+        :param a: radius of the sphere
+        :return res: return the volume of the sphere
+        """
+        r = a
+        try:
+            # volume sphere calculation
+            res = 4 * math.pi * self.cube(r)
+            return res
+        except Exception:
+            print("ERROR")
 
 
 # main function
@@ -34,6 +58,7 @@ if __name__ == '__main__':
     except FileNotFoundError:
         print("ERROR")
     else:
+        ex6 = ex06()
         # reading the file
         for lines in file.readlines():
             try:
@@ -44,7 +69,7 @@ if __name__ == '__main__':
             else:
                 try:
                     # print the volume of the sphere
-                    print(vSphere(number))
+                    print(ex6.vSphere(number))
                 except Exception:
                     print("ERROR")
 

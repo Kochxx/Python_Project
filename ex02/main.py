@@ -11,9 +11,16 @@ import sys
 
 
 class ex02:
-    def squareRoot(a):
+    """
+    ..class:: Class contains the function for the exercise 2
+
+    """
+    def squareRoot(self, a):
         """
-        Function that returns the square root of a float 'a' passed as parameter
+        ..function:: Function that returns the square root of a float 'a' passed as parameter
+
+        :param a: number whose square root must be calculated
+        :return res: return the square root of a if a>=0
         """
 
         num = a
@@ -35,13 +42,14 @@ if __name__ == '__main__':
     except FileNotFoundError:
         print("ERROR")
     else:
+        ex2 = ex02()
         # reading the file
         for lines in file.readlines():
             try:
                 # recovers the number of the line in the form of a float
                 number = float(lines)
                 # print the square root with 2 digits after the decimal point
-                print('{:.2f}'.format(squareRoot(number)))
+                print('{:.2f}'.format(ex2.squareRoot(number)))
             except ValueError:
                 print("ERROR")
         # close file INPUT.txt

@@ -1,13 +1,27 @@
-# -*- coding: utf-8 -*-
-
+"""
+..module:: ex16
+    :synopsis:: Enrichissez la classe Vecteur2D précédente en lui ajoutant
+     une méthode d’affichage etune méthode de surcharge d’addition
+     de deux vecteurs du plan. Dans le programme principal,
+     instanciez deux Vecteur2D, affichez-les et affichez leur somm
+"""
 import sys
 
 
 # define a class with the name "Vecteur2D")
 class Vecteur2D:
+    """
+    ..class:: Class contains the function for the exercise 1
 
-    # init class
+    """
     def __init__(self, cX=0.0, cY=0.0, n=0):
+        """
+        ..function: init class
+
+        :param cX: x coordinate
+        :param cY: y coordinate
+        :param n: number to define the type of vector ( the vector 1, 2 or the somme of the add function)
+        """
         # x coordinate
         self.x = cX
         # y coordinate
@@ -15,8 +29,10 @@ class Vecteur2D:
         # number to define the type of vector ( the vector 1, 2 or the somme of the add function)
         self.num = n
 
-    # displays vector
     def affichage(self):
+        """
+        ..function: displays vector
+        """
         # print the vector like vector 1
         if self.num == 0:
             print("v1 : (x=" + str(self.x) + ", y=" + str(self.y) + ")")
@@ -27,8 +43,12 @@ class Vecteur2D:
             # print the vector like other vector
             print("v" + str(self.num) + " : (x=" + str(self.x) + ", y=" + str(self.y) + ")")
 
-    # function that adds two vectors
     def __add__(self, v2):
+        """
+        ..function: Function that adds two vectors
+        :param v2: vector 2 to add
+
+        """
         self.x = self.x + v2.x
         self.y = self.y + v2.y
         self.num = -1

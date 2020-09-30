@@ -1,19 +1,40 @@
-# -*- coding: utf-8 -*-
+
+"""
+..module:: ex01
+    :synopsis:: A l’aide de la fonction input(),
+     affectez les variables temps et distance
+     par les valeurs saisies par l’utilisateur.
+     Calculez et affichez la valeur de la vitesse.
+     Améliorez l’affichage enimposant un chiffre après le point décimal.
+"""
+
 import sys
 
 
-# function that calculates the speed from the time and distance
-# passed as a parameter
-def handling(a, b):
-    time = a
-    dist = b
-    try:
-        # calculation of speed
-        v = dist/time
-    except ZeroDivisionError:
-        print("ERROR")
-    else:
-        return v
+class ex01:
+    """
+    ..class:: Class contains the function for the exercise 1
+
+    """
+    def handling(self, a, b):
+        """
+        ..function: Function that calculates the speed from the time and distance
+        passed as a parameter
+
+        :param a: time value
+        :param b: distance value
+
+        :return v: the speed calculated
+        """
+        time = a
+        dist = b
+        try:
+            # calculation of speed
+            v = dist/time
+        except ZeroDivisionError:
+            print("ERROR")
+        else:
+            return v
 
 
 # main function
@@ -43,8 +64,9 @@ if __name__ == '__main__':
 
             else:
                 try:
+                    ex1 = ex01()
                     # print the speed with 1 digits after the decimal point
-                    print('{:.1f}'.format(handling(temps, dist)))
+                    print('{:.1f}'.format(ex1.handling(temps, dist)))
                 except Exception:
                     print("ERROR")
         # closed file INPUT.txt
