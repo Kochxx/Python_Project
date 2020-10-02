@@ -59,7 +59,6 @@ if __name__ == '__main__':
     except FileNotFoundError:
         print("ERROR")
     else:
-        ex4 = ex4()
         # reading file
         for lines in file.readlines():
             try:
@@ -77,7 +76,7 @@ if __name__ == '__main__':
             else:
                 try:
                     # print the instruction for the given volume and pressure
-                    print(ex4.ex04(a, b))
+                    print(ex04(a, b))
                 except Exception:
                     print("ERROR")
         # close file
