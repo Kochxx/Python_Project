@@ -1,44 +1,89 @@
 # -*- coding: utf-8 -*-
+"""
+..module:: ex07
+    :synopsis:: Écrire une fonction maFonction
+        qui retourne f (x)= 2x^3+ x -5.
+        Écrire une procédure tabuler avec quatre paramètres :
+        fonction, borneInf, borneSupet nbPas.
+        Cette procédure affiche les valeurs de fonction,
+        de borneInf à borneSup,tous les nbPas.
+        Elle doit respecter borneInf <borneSup.
+        Tester cette procédure par un appel
+        dans le programme principal après avoir saisi les deux bornes
+        et le nombre de pas
+"""
+
 import sys
+import math
 
 
-# function that returns the smallest out of two words
-def smallestWord(a, b):
-    if(a==b):
-    	return a
-    elif (a<b):
-    	return a
-    else:
-    	return b
+class ex07:
+    """
+    ..class:: Class contains the function for the exercise 7
+
+    """
+    def maFonction(self, x):
+        """
+        ..function: Function that returns the value of x after the treatment
+
+        :param x: value x in int
+        :return res: the value in int
+        """
+        res = 2 * math.pow(x, 3) + x - 5
+        return int(res)
+
+    def tabuler(self, fonction, borneInf, borneSup, nbPas):
+        """
+        ..function: Function that returns the value of the function
+                    between the terminals per steps
+
+        :param borneInf: value of the minimal terminal, in int
+        :param borneSup: value of the maximal terminal, in int
+        :param nbPas: value of the number per step
+        :return res: return the value of the function
+                    between the terminals per steps
+        """
+        bI = int(borneInf)
+        bS = int(borneSup)
+        nb = int(nbPas)
+        res = []
+        if nbPas == 0:
+            raise ValueError
+        elif bI < bS:
+            for x in range(bI, bS, nb):
+                mafonction = "self."+fonction + "(" + str(x) + ")"
+                res.append(eval(mafonction))
+        else:
+            raise ValueError
+        return res
+
 
 # main function
 if __name__ == '__main__':
-    # open file TEST.py
+    # open file INPUT.txt
     try:
         nameFile = sys.argv[1]
         file = open(nameFile, "r")
     except FileNotFoundError:
-        print("ERROR")
+        print("ERROR 1")
     else:
+        exo7 = ex07()
         # reading the file
         for lines in file.readlines():
-            try:                
-            	# retrieves the pair of words on the line currently read
+            try:
                 tab = lines.split(";")
                 # checks the number of arguments and them being empty or not
-                if len(tab) != 2 or tab[0] == "" or tab[1] == "":
-                	print("ERROR")
-                	continue
-
-                # stores both words in temporary variables for clarity
-                # rstrip() is used to strip trailing EOL messing with equality
-                firstWord = tab[0].rstrip()
-                secondWord = tab[1].rstrip()
-                # print the smallest word out of the two
-                print(smallestWord(firstWord, secondWord))
+                if len(tab) != 4 or tab[0] == "" or tab[1] == "" or tab[2] == "" or tab[3] == "":
+                    raise ValueError
+                else:
+                    f = tab[0]
+                    borneInf = tab[1]
+                    borneSup = tab[2]
+                    nbPas = tab[3]
+                    print(exo7.tabuler(f, borneInf, borneSup, nbPas))
             except ValueError:
-                print("ERROR")
+                print("ERROR 2")
             except Exception:
-                print("ERROR")
+                print("ERROR 3")
         # close file INPUT.txt
         file.close()

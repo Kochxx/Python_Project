@@ -1,0 +1,5 @@
+maFonction;1;4;1
+maFonction;0;8;2
+maFonction;4;15;3
+maFonction;10;400;10
+maFonction;5;20;5
