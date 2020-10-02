@@ -10,29 +10,24 @@ import sys
 from typing import List
 
 
-class ex10:
+def ex10(self):
     """
-    ..class:: Class contains the function for the exercise 1
+    ..function: Function that returns a comprehension list that adds 3
+                to each item in a list from 0 to 5
+                if the item is greater than or equal to 2
 
+    :return listC the comprehension list modified
     """
-    def comprehensionList(self):
-        """
-        ..function: Function that returns a comprehension list that adds 3
-                    to each item in a list from 0 to 5
-                    if the item is greater than or equal to 2
-
-        :return listC the comprehension list modified
-        """
-        # initialisation of the comprehension list
-        listC = []
-        try:
-            # creation of the comprehension list
-            for i in range(0, 6):
-                if i >= 2:
-                    listC.append(i+3)
-            return listC
-        except:
-            print("ERROR")
+    # initialisation of the comprehension list
+    listC = []
+    try:
+        # creation of the comprehension list
+        for i in range(0, 6):
+            if i >= 2:
+                listC.append(i+3)
+        return listC
+    except:
+        print("ERROR")
 
 
 # main function

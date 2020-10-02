@@ -13,40 +13,35 @@ import math
 import sys
 
 
-class ex06:
+def cube(self, a):
     """
-    ..class:: Class contains the functions for the exercise 6
+    ..function: Function which returns the cube of a number passed in parameter
 
+    :param a: number to be cubed
+    :return res: return a per cube
     """
-    def cube(self, a):
-        """
-        ..function: Function which returns the cube of a number passed in parameter
+    num = a
+    try:
+        # calculate the cube of the number
+        res = math.pow(num, 3)
+        return res
+    except Exception:
+        raise Exception
 
-        :param a: number to be cubed
-        :return res: return a per cube
-        """
-        num = a
-        try:
-            # calculate the cube of the number
-            res = math.pow(num, 3)
-            return res
-        except Exception:
-            raise Exception
+def ex06(self, a):
+    """
+    ..function: Function calculates the volume of a sphere of radius passed in parameter
 
-    def vSphere(self, a):
-        """
-        ..function: Function calculates the volume of a sphere of radius passed in parameter
-
-        :param a: radius of the sphere
-        :return res: return the volume of the sphere
-        """
-        r = a
-        try:
-            # volume sphere calculation
-            res = 4 * math.pi * self.cube(r)
-            return res
-        except Exception:
-            print("ERROR")
+    :param a: radius of the sphere
+    :return res: return the volume of the sphere
+    """
+    r = a
+    try:
+        # volume sphere calculation
+        res = 4 * math.pi * self.cube(r)
+        return res
+    except Exception:
+        print("ERROR")
 
 
 # main function

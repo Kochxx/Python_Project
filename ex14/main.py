@@ -9,23 +9,15 @@ import math
 import sys
 
 
-class MaClasse:
+def ex14(self):
     """
-    ..class:: Class contains the function for the exercise 14
-              -> define a class with the name "MaClasse"
+     ..function: Procedure that displays the values of y and z
 
-    """
-    # attributes of its Class
+     """
     x = 23
     y = x + 5
-
-    def affiche(self):
-        """
-         ..function: Procedure that displays the values of y and z
-
-         """
-        z = 42
-        print("(" + str(self.y) + ", " + str(z) + ")")
+    z = 42
+    print("(" + str(self.y) + ", " + str(z) + ")")
 
 
 # main function
