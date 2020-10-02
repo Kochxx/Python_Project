@@ -15,15 +15,15 @@ class Vecteur2D:
     ..class:: Class with the name "Vecteur2D"
 
     """
-    # init class
-    def __init__(self, cX = 0.0, cY = 0.0):
-        """
-            ..function: Init class
-            :param cX: x coordinate
-            :param cY: y coordinate
-        """
-        self.x = cX
-        self.y = cY
+# init class
+def __init__(self, cX = 0.0, cY = 0.0):
+    """
+        ..function: Init class
+        :param cX: x coordinate
+        :param cY: y coordinate
+    """
+    self.x = cX
+    self.y = cY
 
 
 # main function

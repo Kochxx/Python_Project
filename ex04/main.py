@@ -18,41 +18,36 @@ import math
 import sys
 
 
-class ex04:
+def ex04(self, a, b):
     """
-    ..class:: Class contains the function for the exercise 4
+    ..function:: Function that verifies the pressure and volume passed
+                 in parameter according to defined thresholds and returns the instructions
 
+    :param a: pression value
+    :param b: volume value
+    :return res: return the message "KO"/"Augmenter"/"Diminuer"/"OK"
     """
-    def secure(self, a, b):
-        """
-        ..function:: Function that verifies the pressure and volume passed
-                     in parameter according to defined thresholds and returns the instructions
-
-        :param a: pression value
-        :param b: volume value
-        :return res: return the message "KO"/"Augmenter"/"Diminuer"/"OK"
-        """
-        # pressure threshold
-        pSeuil = 2.3
-        # volume threshold
-        vSeuil = 7.41
-        pression = a
-        volume = b
-        try:
-            # checks the pressure and the volume in relation to their threshold
-            if (pression > pSeuil) & (volume > vSeuil):
-                res = "KO"
+    # pressure threshold
+    pSeuil = 2.3
+    # volume threshold
+    vSeuil = 7.41
+    pression = a
+    volume = b
+    try:
+        # checks the pressure and the volume in relation to their threshold
+        if (pression > pSeuil) & (volume > vSeuil):
+            res = "KO"
+        else:
+            if pression > pSeuil:
+                res = "Augmenter"
             else:
-                if pression > pSeuil:
-                    res = "Augmenter"
+                if volume > vSeuil:
+                    res = "Diminuer"
                 else:
-                    if volume > vSeuil:
-                        res = "Diminuer"
-                    else:
-                        res = "OK"
-            return res
-        except Exception :
-            print("ERROR")
+                    res = "OK"
+        return res
+    except Exception :
+        print("ERROR")
 
 
 # main function
@@ -64,7 +59,6 @@ if __name__ == '__main__':
     except FileNotFoundError:
         print("ERROR")
     else:
-        ex4 = ex04()
         # reading file
         for lines in file.readlines():
             try:
@@ -82,7 +76,7 @@ if __name__ == '__main__':
             else:
                 try:
                     # print the instruction for the given volume and pressure
-                    print(ex4.secure(a, b))
+                    print(ex04(a, b))
                 except Exception:
                     print("ERROR")
         # close file

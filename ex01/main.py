@@ -1,4 +1,3 @@
-
 """
 ..module:: ex01
     :synopsis:: A l’aide de la fonction input(),
@@ -11,30 +10,25 @@
 import sys
 
 
-class ex01:
+def ex01(self, a, b):
     """
-    ..class:: Class contains the function for the exercise 1
+    ..function: Function that calculates the speed from the time and distance
+    passed as a parameter
 
+    :param a: time value
+    :param b: distance value
+
+    :return v: the speed calculated
     """
-    def handling(self, a, b):
-        """
-        ..function: Function that calculates the speed from the time and distance
-        passed as a parameter
-
-        :param a: time value
-        :param b: distance value
-
-        :return v: the speed calculated
-        """
-        time = a
-        dist = b
-        try:
-            # calculation of speed
-            v = dist/time
-        except ZeroDivisionError:
-            print("ERROR")
-        else:
-            return v
+    time = a
+    dist = b
+    try:
+        # calculation of speed
+        v = dist/time
+    except ZeroDivisionError:
+        print("ERROR")
+    else:
+        return v
 
 
 # main function
@@ -66,7 +60,7 @@ if __name__ == '__main__':
                 try:
                     ex1 = ex01()
                     # print the speed with 1 digits after the decimal point
-                    print('{:.1f}'.format(ex1.handling(temps, dist)))
+                    print('{:.1f}'.format(ex1.ex01(temps, dist)))
                 except Exception:
                     print("ERROR")
         # closed file INPUT.txt

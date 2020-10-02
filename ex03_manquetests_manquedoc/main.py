@@ -3,7 +3,7 @@ import sys
 
 
 # function that returns the smallest out of two words
-def smallestWord(a, b):
+def ex03(a, b):
     firstStr = a.lower()
     secondStr = b.lower()
     if(firstStr == secondStr):
@@ -37,7 +37,7 @@ if __name__ == '__main__':
                 firstWord = tab[0].rstrip()
                 secondWord = tab[1].rstrip()
                 # print the smallest word out of the two
-                print(smallestWord(firstWord, secondWord))
+                print(ex03(firstWord, secondWord))
             except ValueError:
                 print("ERROR")
             except Exception:

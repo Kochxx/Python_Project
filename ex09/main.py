@@ -71,12 +71,12 @@ class ex09:
         except:
             print("ERROR")
 
-    def subList(self, firstElement, secundElement):
+    def subList(self, firstElement, secondElement):
         """
         ..function: Function that returns different type of sub-list
 
         :param firstElement: the first element to define the sub-list
-        :param secundElement: the other element to define the sub-list
+        :param secondElement: the other element to define the sub-list
 
         :return res: the sub-list defined
         """
@@ -84,21 +84,21 @@ class ex09:
             l = self.liste
             res = ""
             if isinstance(firstElement, int):
-                if isinstance(secundElement, int):
-                    res = l[int(firstElement):int(secundElement)]
-                elif secundElement == 'oui':
+                if isinstance(secondElement, int):
+                    res = l[int(firstElement):int(secondElement)]
+                elif secondElement == 'oui':
                     res = l[int(firstElement):]
                 else:
                     raise Exception
             elif firstElement == 'oui':
-                if isinstance(secundElement, int):
-                    res = l[:int(secundElement)]
-                elif secundElement == 'oui':
+                if isinstance(secondElement, int):
+                    res = l[:int(secondElement)]
+                elif secondElement == 'oui':
                     res = l[::]
                 else:
                     raise Exception
             else:
-                res = l[int(firstElement):int(secundElement)]
+                res = l[int(firstElement):int(secondElement)]
             return res
         except Exception:
             print("ERROR")

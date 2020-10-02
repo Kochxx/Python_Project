@@ -16,47 +16,40 @@
 import sys
 import math
 
-
-class ex07:
+def maFonction(self, x):
     """
-    ..class:: Class contains the function for the exercise 7
+    ..function: Function that returns the value of x after the treatment
 
+    :param x: value x in int
+    :return res: the value in int
     """
-    def maFonction(self, x):
-        """
-        ..function: Function that returns the value of x after the treatment
+    res = 2 * math.pow(x, 3) + x - 5
+    return int(res)
 
-        :param x: value x in int
-        :return res: the value in int
-        """
-        res = 2 * math.pow(x, 3) + x - 5
-        return int(res)
+def ex07(self, fonction, borneInf, borneSup, nbPas):
+    """
+    ..function: Function that returns the value of the function
+                between the terminals per steps
 
-    def tabuler(self, fonction, borneInf, borneSup, nbPas):
-        """
-        ..function: Function that returns the value of the function
-                    between the terminals per steps
-
-        :param borneInf: value of the minimal terminal, in int
-        :param borneSup: value of the maximal terminal, in int
-        :param nbPas: value of the number per step
-        :return res: return the value of the function
-                    between the terminals per steps
-        """
-        bI = int(borneInf)
-        bS = int(borneSup)
-        nb = int(nbPas)
-        res = []
-        if nbPas == 0:
-            raise ValueError
-        elif bI < bS:
-            for x in range(bI, bS, nb):
-                mafonction = "self."+fonction + "(" + str(x) + ")"
-                res.append(eval(mafonction))
-        else:
-            raise ValueError
-        return res
-
+    :param borneInf: value of the minimal terminal, in int
+    :param borneSup: value of the maximal terminal, in int
+    :param nbPas: value of the number per step
+    :return res: return the value of the function
+                between the terminals per steps
+    """
+    bI = int(borneInf)
+    bS = int(borneSup)
+    nb = int(nbPas)
+    res = []
+    if nbPas == 0:
+        raise ValueError
+    elif bI < bS:
+        for x in range(bI, bS, nb):
+            mafonction = "self."+fonction + "(" + str(x) + ")"
+            res.append(eval(mafonction))
+    else:
+        raise ValueError
+    return res
 
 # main function
 if __name__ == '__main__':
@@ -67,7 +60,6 @@ if __name__ == '__main__':
     except FileNotFoundError:
         print("ERROR 1")
     else:
-        exo7 = ex07()
         # reading the file
         for lines in file.readlines():
             try:
@@ -80,7 +72,7 @@ if __name__ == '__main__':
                     borneInf = tab[1]
                     borneSup = tab[2]
                     nbPas = tab[3]
-                    print(exo7.tabuler(f, borneInf, borneSup, nbPas))
+                    print(ex07(f, borneInf, borneSup, nbPas))
             except ValueError:
                 print("ERROR 2")
             except Exception:
