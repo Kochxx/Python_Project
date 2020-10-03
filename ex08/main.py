@@ -9,7 +9,8 @@
         pour toutes les vitesses de 100 km/h à 300 km/h, par pas de 10 km/h,
         les résultats étant arrondis à la minute inférieure.
         Écrire une procédure tchacatchac qui reçoit la vitesse du train
-        et qui affiche l’heure dudrame. Écrire le programme principal qui affiche le tableau demandé
+        et qui affiche l’heure dudrame. Écrire le programme principal qui
+        affiche le tableau demandé
 """
 
 import math
@@ -22,7 +23,9 @@ def tchacatchac(self, a):
                 according to its speed passed in parameter
 
     :param a: time value
-    :return res: return the string with the speed of the train and the hour of arrival
+
+    :return res: return the string with the speed of the train and the hour
+                of arrival
     """
     # train speed
     v = a

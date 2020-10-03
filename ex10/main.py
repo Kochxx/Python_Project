@@ -16,7 +16,7 @@ def ex10(self):
                 to each item in a list from 0 to 5
                 if the item is greater than or equal to 2
 
-    :return listC the comprehension list modified
+    :return listC: the modified comprehension list
     """
     # initialisation of the comprehension list
     listC = []

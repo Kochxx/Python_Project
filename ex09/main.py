@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-..module:: ex01
+..module:: ex09
     :synopsis:: Définir la liste : liste =[17, 38, 10, 25, 72],
              puis effectuez les actions suivantes :
             – triez et affichez la liste ;
@@ -26,7 +26,7 @@ class ex09:
 
     def __init__(self):
         """
-        ..function: definition of the initials values for the list
+        ..function: definition of the initial values for the list
 
         """
         self.liste = [17, 38, 10, 25, 72]
@@ -41,8 +41,8 @@ class ex09:
 
     def action(self, operation, element=0):
         """
-        ..function: Function that returns a list after the realisation of operation defined,
-                    like add, remove, reverse, sort, ...
+        ..function: Function that returns a list after applying an operation to it
+                    i.e. add, remove, reverse, sort, ...
 
         :param operation: type of operation to realize
         :param element: the element to permit to realize the operation
@@ -73,12 +73,12 @@ class ex09:
 
     def subList(self, firstElement, secondElement):
         """
-        ..function: Function that returns different type of sub-list
+        ..function: Function that returns different type of sub-lists
 
         :param firstElement: the first element to define the sub-list
         :param secondElement: the other element to define the sub-list
 
-        :return res: the sub-list defined
+        :return res: the defined sub-list
         """
         try:
             l = self.liste

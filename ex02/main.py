@@ -16,6 +16,7 @@ def ex02(self, a):
     ..function:: Function that returns the square root of a float 'a' passed as parameter
 
     :param a: number whose square root must be calculated
+    
     :return res: return the square root of a if a>=0
     """
 

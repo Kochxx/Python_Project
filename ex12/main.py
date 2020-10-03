@@ -1,12 +1,11 @@
 """
 ..module:: ex12
     :synopsis:: A l’aide de la fonction input(),
-     affectez les variables temps et distance
-     par les valeurs saisies par l’utilisateur.
-     Calculez et affichez la valeur de la vitesse.
-     Améliorez l’affichage enimposant un chiffre après le point décimal.
+        affectez les variables temps et distance
+        par les valeurs saisies par l’utilisateur.
+        Calculez et affichez la valeur de la vitesse.
+        Améliorez l’affichage enimposant un chiffre après le point décimal.
 """
-
 import math
 
 
@@ -17,7 +16,7 @@ import sys
 def getX(self):
     """
     ..function: Function that returns the set X
-
+    
     :return X: the set X
     """
     # init set X
@@ -28,19 +27,20 @@ def getX(self):
 def getY(self):
     """
     ..function: Function that returns the set Y
-
+    
     :return Y: the set Y
     """
     # init set Y
     Y = {'s', 'b', 'd'}
-
     return Y
 
 def setsInitial(self, a, b):
     """
     ..function: Function that returns the display of the X and Y sets
+
     :param a: the set X
     :param b: the set Y
+
     :return res: a string containing the display of the sets
     """
     try:
@@ -70,7 +70,6 @@ def setsInitial(self, a, b):
 
         # returns a string containing the display of the sets
         return res
-
     except Exception:
         raise Exception
 
@@ -78,8 +77,10 @@ def appartenance(self, a, b):
     """
     ..function: Function which returns the display of the belonging operation
                 between the 2 sets passed in parameter
+
     :param a: character whose existence must be validated as a set
     :param b: the name of the set
+
     :return res: a string containing the display of the function
     """
     # the character whose existence must be validated as a set
@@ -112,9 +113,11 @@ def operation(self, a, b, c):
     ..function: Function that returns the display of the operation
                 between two sets. The type of the operation,
                 and the two sets are passed in parameter
+
     :param a: the name of the set 1
     :param b: the name of the set 2
     :param c: character to define the type of operation
+
     :return res: a string containing the display of the operation
     """
     type_operation = c

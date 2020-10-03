@@ -1,9 +1,22 @@
-# -*- coding: utf-8 -*-
+"""
+..module:: ex03
+    :synopsis:: Saisir deux mots, comparez-les pour trouver 
+        le « plus petit » et affichez le résultat.
+        L’ordre lexicographique est celui du dictionnaire
+"""
 import sys
 
 
 # function that returns the smallest out of two words
 def ex03(a, b):
+    """
+    ..function: function that returns the smallest out of two words
+
+    :param a: first word
+    :param b: second word
+
+    :return the smallest word
+    """
     firstStr = a.lower()
     secondStr = b.lower()
     if(firstStr == secondStr):

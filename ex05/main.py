@@ -15,6 +15,7 @@ def ex05(start, end, a):
     :param start: starting integer
     :param end: end integer
     :param a: step
+    
     :return res: list of integer matching condition
     """
 	x = range(start, end, a)

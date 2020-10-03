@@ -21,6 +21,7 @@ def maFonction(self, x):
     ..function: Function that returns the value of x after the treatment
 
     :param x: value x in int
+
     :return res: the value in int
     """
     res = 2 * math.pow(x, 3) + x - 5
@@ -34,6 +35,7 @@ def ex07(self, fonction, borneInf, borneSup, nbPas):
     :param borneInf: value of the minimal terminal, in int
     :param borneSup: value of the maximal terminal, in int
     :param nbPas: value of the number per step
+    
     :return res: return the value of the function
                 between the terminals per steps
     """

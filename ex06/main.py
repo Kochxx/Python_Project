@@ -15,9 +15,10 @@ import sys
 
 def cube(self, a):
     """
-    ..function: Function which returns the cube of a number passed in parameter
+    ..function: Function that returns the cube of a number passed in parameter
 
     :param a: number to be cubed
+
     :return res: return a per cube
     """
     num = a
@@ -33,6 +34,7 @@ def ex06(self, a):
     ..function: Function calculates the volume of a sphere of radius passed in parameter
 
     :param a: radius of the sphere
+    
     :return res: return the volume of the sphere
     """
     r = a

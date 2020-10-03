@@ -1,9 +1,11 @@
 """
 ..module:: ex14
     :synopsis:: Définir une classe MaClasse possédant les attributs suivants :
-    – données : deux attributs de classes : x = 23 et y = x + 5.
-    – méthode : une méthode affiche contenant un attribut d’instance z = 42 et les affichages de y et de z.
-    – Dans le programme principal, instanciez un objet de la classe MaClasse et invoquez la méthode affiche.
+            – données : deux attributs de classes : x = 23 et y = x + 5.
+            – méthode : une méthode affiche contenant un attribut d’instance z = 42 
+                        et les affichages de y et de z.
+            – Dans le programme principal, instanciez un objet de la classe MaClasse
+                        et invoquez la méthode affiche.
 """
 import math
 import sys

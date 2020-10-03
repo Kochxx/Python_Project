@@ -173,7 +173,7 @@
 affectez les variables temps et distance
 par les valeurs saisies par l’utilisateur.
 Calculez et affichez la valeur de la vitesse.
-Améliorez l’affichage enimposant un chiffre après le point décimal.</p>
+Améliorez l’affichage en imposant un chiffre après le point décimal.</p>
 </dd>
 </dl>
 </dd>
@@ -181,8 +181,10 @@ Améliorez l’affichage enimposant un chiffre après le point décimal.</p>
 <dl class="py function">
 <dt>
 <code class="sig-prename descclassname">ex01.main.</code><code class="sig-name descname">ex01</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span></dt>
-<dd><p>..function: Function that calculates the speed from the time and distance
-passed as a parameter</p>
+<dd><dl class="simple">
+<dt>..function: Function that calculates the speed from the time and distance</dt><dd><p>passed as a parameter</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -226,6 +228,31 @@ affichez sa racine, sinon affichez un message d’erreur:
 </div>
 <div class="section" id="exercice-3">
 <h1>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>..module:: ex11</dt><dd><dl class="field-list simple">
+<dt class="field-odd">synopsis:</dt>
+<dd class="field-odd"><p>Saisir deux mots, comparez-les pour trouver
+le « plus petit » et affichez le résultat.
+L’ordre lexicographique est celui du dictionnaire</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">ex03.main.</code><code class="sig-name descname">ex03</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span></dt>
+<dd><p>..function: function that returns the smallest out of two words</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> – first word</p></li>
+<li><p><strong>b</strong> – second word</p></li>
+</ul>
+</dd>
+</dl>
+<p>:return the smallest word</p>
+</dd></dl>
+
 </div>
 <div class="section" id="exercice-4">
 <h1>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">¶</a></h1>
@@ -346,6 +373,59 @@ dans le programme principal décimal.</p>
 </div>
 <div class="section" id="exercice-7">
 <h1>Exercice 7<a class="headerlink" href="#exercice-7" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>..module:: ex07</dt><dd><dl class="field-list simple">
+<dt class="field-odd">synopsis:</dt>
+<dd class="field-odd"><p>Écrire une fonction maFonction
+qui retourne f (x)= 2x^3+ x -5.
+Écrire une procédure tabuler avec quatre paramètres :
+fonction, borneInf, borneSupet nbPas.
+Cette procédure affiche les valeurs de fonction,
+de borneInf à borneSup,tous les nbPas.
+Elle doit respecter borneInf &lt;borneSup.
+Tester cette procédure par un appel
+dans le programme principal après avoir saisi les deux bornes
+et le nombre de pas</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">ex07.main.</code><code class="sig-name descname">ex07</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">fonction</span></em>, <em class="sig-param"><span class="n">borneInf</span></em>, <em class="sig-param"><span class="n">borneSup</span></em>, <em class="sig-param"><span class="n">nbPas</span></em><span class="sig-paren">)</span></dt>
+<dd><dl class="simple">
+<dt>..function: Function that returns the value of the function</dt><dd><p>between the terminals per steps</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>borneInf</strong> – value of the minimal terminal, in int</p></li>
+<li><p><strong>borneSup</strong> – value of the maximal terminal, in int</p></li>
+<li><p><strong>nbPas</strong> – value of the number per step</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return res</dt>
+<dd class="field-even"><p>return the value of the function
+between the terminals per steps</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">ex07.main.</code><code class="sig-name descname">maFonction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span></dt>
+<dd><p>..function: Function that returns the value of x after the treatment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – value x in int</p>
+</dd>
+<dt class="field-even">Return res</dt>
+<dd class="field-even"><p>the value in int</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="exercice-8">
 <h1>Exercice 8<a class="headerlink" href="#exercice-8" title="Permalink to this headline">¶</a></h1>
@@ -400,6 +480,81 @@ et qui affiche l’heure dudrame. Écrire le programme principal qui affiche le 
 </div>
 <div class="section" id="exercice-9">
 <h1>Exercice 9<a class="headerlink" href="#exercice-9" title="Permalink to this headline">¶</a></h1>
+<dl>
+<dt>..module:: ex01</dt><dd><dl class="field-list">
+<dt class="field-odd">synopsis:</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>Définir la liste<span class="classifier">liste =[17, 38, 10, 25, 72],</span></dt><dd><p>puis effectuez les actions suivantes :</p>
+</dd>
+</dl>
+<p>– triez et affichez la liste ;
+– ajoutez l’élément 12 à la liste et affichez la liste ;
+– renversez et affichez la liste ;
+– affichez l’indice de l’élément 17 ;
+– enlevez l’élément 38 et affichez la liste ;
+– affichez la sous-liste du 2ème au 3ème élément ;
+– affichez la sous-liste du début au 2e élément
+– affichez la sous-liste du 3e élément à la fin de la liste ;
+– affichez la sous-liste complète de la liste ;
+– affichez le dernier élément en utilisant un indexage négatif.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">ex09.main.</code><code class="sig-name descname">ex09</code></dt>
+<dd><p>..class:: Class contains the function for the exercise 9</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">operation</span></em>, <em class="sig-param"><span class="n">element</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span></dt>
+<dd><dl class="simple">
+<dt>..function: Function that returns a list after the realisation of operation defined,</dt><dd><p>like add, remove, reverse, sort, …</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>operation</strong> – type of operation to realize</p></li>
+<li><p><strong>element</strong> – the element to permit to realize the operation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return res</dt>
+<dd class="field-even"><p>the new list or the element extract of the list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">getList</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>..function: Function that returns the value of the public variable ‘liste’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return liste</dt>
+<dd class="field-odd"><p>list public variable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">subList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">firstElement</span></em>, <em class="sig-param"><span class="n">secondElement</span></em><span class="sig-paren">)</span></dt>
+<dd><p>..function: Function that returns different type of sub-list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>firstElement</strong> – the first element to define the sub-list</p></li>
+<li><p><strong>secondElement</strong> – the other element to define the sub-list</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return res</dt>
+<dd class="field-even"><p>the sub-list defined</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="exercice-10">
 <h1>Exercice 10<a class="headerlink" href="#exercice-10" title="Permalink to this headline">¶</a></h1>
@@ -427,6 +582,34 @@ if the item is greater than or equal to 2</p>
 </div>
 <div class="section" id="exercice-11">
 <h1>Exercice 11<a class="headerlink" href="#exercice-11" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>..module:: ex11</dt><dd><dl class="field-list simple">
+<dt class="field-odd">synopsis:</dt>
+<dd class="field-odd"><p>Utilisez une liste en compréhension pour obtenir
+la liste [‘ad’, ‘ae’, ‘bd’, ‘be’, ‘cd’, ‘ce’] à partir
+des chaînes “abc” et “de”</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">ex11.main.</code><code class="sig-name descname">sortList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">firstString</span></em>, <em class="sig-param"><span class="n">secondString</span></em><span class="sig-paren">)</span></dt>
+<dd><dl class="simple">
+<dt>..function: function that is using a list of comprehension</dt><dd><p>taking two string and merging them into a table</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>firstString</strong> – first string to be merged</p></li>
+<li><p><strong>secondString</strong> – second string to be merged</p></li>
+</ul>
+</dd>
+</dl>
+<p>:return the comprehension list</p>
+</dd></dl>
+
 </div>
 <div class="section" id="exercice-12">
 <h1>Exercice 12<a class="headerlink" href="#exercice-12" title="Permalink to this headline">¶</a></h1>
@@ -465,23 +648,15 @@ Améliorez l’affichage enimposant un chiffre après le point décimal.</p>
 <dl class="py function">
 <dt>
 <code class="sig-prename descclassname">ex12.main.</code><code class="sig-name descname">getX</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span></dt>
-<dd><p>..function: Function that returns the set X</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return X</dt>
-<dd class="field-odd"><p>the set X</p>
-</dd>
-</dl>
+<dd><p>..function: Function that returns the set X
+:return X: the set X</p>
 </dd></dl>
 
 <dl class="py function">
 <dt>
 <code class="sig-prename descclassname">ex12.main.</code><code class="sig-name descname">getY</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span></dt>
-<dd><p>..function: Function that returns the set Y</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return Y</dt>
-<dd class="field-odd"><p>the set Y</p>
-</dd>
-</dl>
+<dd><p>..function: Function that returns the set Y
+:return Y: the set Y</p>
 </dd></dl>
 
 <dl class="py function">
@@ -518,6 +693,32 @@ and the two sets are passed in parameter</p>
 </div>
 <div class="section" id="exercice-13">
 <h1>Exercice 13<a class="headerlink" href="#exercice-13" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>..module:: ex13</dt><dd><dl class="field-list simple">
+<dt class="field-odd">synopsis:</dt>
+<dd class="field-odd"><p>Écrire une fonction compterMots ayant un argument
+(une chaîne de caractères) et qui renvoie un dictionnaire
+qui contient la fréquence de tous les mots de la chaîne entrée</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">ex13.main.</code><code class="sig-name descname">compterMots</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stringParam</span></em><span class="sig-paren">)</span></dt>
+<dd><dl class="simple">
+<dt>..function: function taking a string, conting every occurence</dt><dd><p>of the words inside of it and returning said count
+in the form of a dictionary</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stringParam</strong> – string to be evaluated</p>
+</dd>
+</dl>
+<p>:return result, thedictionary with the count of all occurences</p>
+</dd></dl>
+
 </div>
 <div class="section" id="exercice-14">
 <h1>Exercice 14<a class="headerlink" href="#exercice-14" title="Permalink to this headline">¶</a></h1>

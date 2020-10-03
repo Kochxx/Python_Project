@@ -1,9 +1,22 @@
-# -*- coding: utf-8 -*-
+"""
+..module:: ex13
+    :synopsis:: Écrire une fonction compterMots ayant un argument
+        (une chaîne de caractères) et qui renvoie un dictionnaire 
+        qui contient la fréquence de tous les mots de la chaîne entrée
+"""
 import sys
 
 
-# function that returns the smallest out of two words
-def ex13(stringParam):
+def compterMots(stringParam):
+    """
+    ..function: function taking a string, conting every occurence 
+                of the words inside of it and returning said count
+                in the form of a dictionary
+
+    :param stringParam: string to be evaluated
+
+    :return result, thedictionary with the count of all occurences
+    """
     dictionary = {
     }
     # retrieves the words on the line currently read
@@ -44,7 +57,7 @@ if __name__ == '__main__':
                 # rstrip() is used to strip trailing EOL
                 print(lines)
                 # count the words in the string
-                print(ex13(lines))
+                print(compterMots(lines))
             except ValueError:
                 print("ERROR")
             except Exception:

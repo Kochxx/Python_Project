@@ -1,9 +1,9 @@
 """
 ..module:: ex16
     :synopsis:: Enrichissez la classe Vecteur2D précédente en lui ajoutant
-     une méthode d’affichage etune méthode de surcharge d’addition
-     de deux vecteurs du plan. Dans le programme principal,
-     instanciez deux Vecteur2D, affichez-les et affichez leur somm
+            une méthode d’affichage etune méthode de surcharge d’addition
+            de deux vecteurs du plan. Dans le programme principal,
+            instanciez deux Vecteur2D, affichez-les et affichez leur somm
 """
 import sys
 
