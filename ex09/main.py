@@ -2,7 +2,7 @@
 """
 ..module:: ex09
     :synopsis:: Définir la liste : liste =[17, 38, 10, 25, 72],
-             puis effectuez les actions suivantes :
+            puis effectuez les actions suivantes :
             – triez et affichez la liste ;
             – ajoutez l’élément 12 à la liste et affichez la liste ;
             – renversez et affichez la liste ;

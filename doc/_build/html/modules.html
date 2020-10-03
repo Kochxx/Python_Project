@@ -193,7 +193,7 @@ Améliorez l’affichage en imposant un chiffre après le point décimal.</p>
 </ul>
 </dd>
 <dt class="field-even">Return v</dt>
-<dd class="field-even"><p>the speed calculated</p>
+<dd class="field-even"><p>the calculated speed</p>
 </dd>
 </dl>
 </dd></dl>
@@ -229,7 +229,7 @@ affichez sa racine, sinon affichez un message d’erreur:
 <div class="section" id="exercice-3">
 <h1>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">¶</a></h1>
 <dl class="simple">
-<dt>..module:: ex11</dt><dd><dl class="field-list simple">
+<dt>..module:: ex03</dt><dd><dl class="field-list simple">
 <dt class="field-odd">synopsis:</dt>
 <dd class="field-odd"><p>Saisir deux mots, comparez-les pour trouver
 le « plus petit » et affichez le résultat.
@@ -345,7 +345,7 @@ dans le programme principal décimal.</p>
 <dl class="py function">
 <dt>
 <code class="sig-prename descclassname">ex06.main.</code><code class="sig-name descname">cube</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">a</span></em><span class="sig-paren">)</span></dt>
-<dd><p>..function: Function which returns the cube of a number passed in parameter</p>
+<dd><p>..function: Function that returns the cube of a number passed in parameter</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>a</strong> – number to be cubed</p>
@@ -441,7 +441,8 @@ Le tableau prédira les différentes heures possibles
 pour toutes les vitesses de 100 km/h à 300 km/h, par pas de 10 km/h,
 les résultats étant arrondis à la minute inférieure.
 Écrire une procédure tchacatchac qui reçoit la vitesse du train
-et qui affiche l’heure dudrame. Écrire le programme principal qui affiche le tableau demandé</p>
+et qui affiche l’heure dudrame. Écrire le programme principal qui
+affiche le tableau demandé</p>
 </dd>
 </dl>
 </dd>
@@ -472,7 +473,8 @@ et qui affiche l’heure dudrame. Écrire le programme principal qui affiche le 
 <dd class="field-odd"><p><strong>a</strong> – time value</p>
 </dd>
 <dt class="field-even">Return res</dt>
-<dd class="field-even"><p>return the string with the speed of the train and the hour of arrival</p>
+<dd class="field-even"><p>return the string with the speed of the train and the hour
+of arrival</p>
 </dd>
 </dl>
 </dd></dl>
@@ -480,14 +482,12 @@ et qui affiche l’heure dudrame. Écrire le programme principal qui affiche le 
 </div>
 <div class="section" id="exercice-9">
 <h1>Exercice 9<a class="headerlink" href="#exercice-9" title="Permalink to this headline">¶</a></h1>
-<dl>
-<dt>..module:: ex01</dt><dd><dl class="field-list">
+<dl class="simple">
+<dt>..module:: ex09</dt><dd><dl class="field-list simple">
 <dt class="field-odd">synopsis:</dt>
-<dd class="field-odd"><dl class="simple">
-<dt>Définir la liste<span class="classifier">liste =[17, 38, 10, 25, 72],</span></dt><dd><p>puis effectuez les actions suivantes :</p>
-</dd>
-</dl>
-<p>– triez et affichez la liste ;
+<dd class="field-odd"><p>Définir la liste : liste =[17, 38, 10, 25, 72],
+puis effectuez les actions suivantes :
+– triez et affichez la liste ;
 – ajoutez l’élément 12 à la liste et affichez la liste ;
 – renversez et affichez la liste ;
 – affichez l’indice de l’élément 17 ;
@@ -509,7 +509,7 @@ et qui affiche l’heure dudrame. Écrire le programme principal qui affiche le 
 <dt>
 <code class="sig-name descname">action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">operation</span></em>, <em class="sig-param"><span class="n">element</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span></dt>
 <dd><dl class="simple">
-<dt>..function: Function that returns a list after the realisation of operation defined,</dt><dd><p>like add, remove, reverse, sort, …</p>
+<dt>..function: Function that returns a list after applying an operation to it</dt><dd><p>i.e. add, remove, reverse, sort, …</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -539,7 +539,7 @@ et qui affiche l’heure dudrame. Écrire le programme principal qui affiche le 
 <dl class="py method">
 <dt>
 <code class="sig-name descname">subList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">firstElement</span></em>, <em class="sig-param"><span class="n">secondElement</span></em><span class="sig-paren">)</span></dt>
-<dd><p>..function: Function that returns different type of sub-list</p>
+<dd><p>..function: Function that returns different type of sub-lists</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -548,7 +548,7 @@ et qui affiche l’heure dudrame. Écrire le programme principal qui affiche le 
 </ul>
 </dd>
 <dt class="field-even">Return res</dt>
-<dd class="field-even"><p>the sub-list defined</p>
+<dd class="field-even"><p>the defined sub-list</p>
 </dd>
 </dl>
 </dd></dl>
@@ -576,7 +576,11 @@ mais seulement si l’élément est supérieur ou égal à 2</p>
 if the item is greater than or equal to 2</p>
 </dd>
 </dl>
-<p>:return listC the comprehension list modified</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return listC</dt>
+<dd class="field-odd"><p>the modified comprehension list</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -648,15 +652,23 @@ Améliorez l’affichage enimposant un chiffre après le point décimal.</p>
 <dl class="py function">
 <dt>
 <code class="sig-prename descclassname">ex12.main.</code><code class="sig-name descname">getX</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span></dt>
-<dd><p>..function: Function that returns the set X
-:return X: the set X</p>
+<dd><p>..function: Function that returns the set X</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return X</dt>
+<dd class="field-odd"><p>the set X</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt>
 <code class="sig-prename descclassname">ex12.main.</code><code class="sig-name descname">getY</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span></dt>
-<dd><p>..function: Function that returns the set Y
-:return Y: the set Y</p>
+<dd><p>..function: Function that returns the set Y</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return Y</dt>
+<dd class="field-odd"><p>the set Y</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -684,10 +696,18 @@ and the two sets are passed in parameter</p>
 <dl class="py function">
 <dt>
 <code class="sig-prename descclassname">ex12.main.</code><code class="sig-name descname">setsInitial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span></dt>
-<dd><p>..function: Function that returns the display of the X and Y sets
-:param a: the set X
-:param b: the set Y
-:return res: a string containing the display of the sets</p>
+<dd><p>..function: Function that returns the display of the X and Y sets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> – the set X</p></li>
+<li><p><strong>b</strong> – the set Y</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return res</dt>
+<dd class="field-even"><p>a string containing the display of the sets</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -723,14 +743,20 @@ in the form of a dictionary</p>
 <div class="section" id="exercice-14">
 <h1>Exercice 14<a class="headerlink" href="#exercice-14" title="Permalink to this headline">¶</a></h1>
 <dl>
-<dt>..module:: ex14</dt><dd><dl class="field-list simple">
+<dt>..module:: ex14</dt><dd><dl class="field-list">
 <dt class="field-odd">synopsis:</dt>
-<dd class="field-odd"><p>Définir une classe MaClasse possédant les attributs suivants :</p>
+<dd class="field-odd"><p>Définir une classe MaClasse possédant les attributs suivants :
+– données : deux attributs de classes : x = 23 et y = x + 5.
+– méthode : une méthode affiche contenant un attribut d’instance z = 42</p>
+<blockquote>
+<div><p>et les affichages de y et de z.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>– Dans le programme principal, instanciez un objet de la classe MaClasse</dt><dd><p>et invoquez la méthode affiche.</p>
 </dd>
 </dl>
-<p>– données : deux attributs de classes : x = 23 et y = x + 5.
-– méthode : une méthode affiche contenant un attribut d’instance z = 42 et les affichages de y et de z.
-– Dans le programme principal, instanciez un objet de la classe MaClasse et invoquez la méthode affiche.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 <dl class="py function">
