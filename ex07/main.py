@@ -16,7 +16,8 @@
 import sys
 import math
 
-def maFonction(self, x):
+
+def maFonction(x):
     """
     ..function: Function that returns the value of x after the treatment
 
@@ -27,7 +28,8 @@ def maFonction(self, x):
     res = 2 * math.pow(x, 3) + x - 5
     return int(res)
 
-def ex07(self, fonction, borneInf, borneSup, nbPas):
+
+def tabuler(fonction, borneInf, borneSup, nbPas):
     """
     ..function: Function that returns the value of the function
                 between the terminals per steps
@@ -47,11 +49,12 @@ def ex07(self, fonction, borneInf, borneSup, nbPas):
         raise ValueError
     elif bI < bS:
         for x in range(bI, bS, nb):
-            mafonction = "self."+fonction + "(" + str(x) + ")"
+            mafonction = fonction + "(" + str(x) + ")"
             res.append(eval(mafonction))
     else:
         raise ValueError
     return res
+
 
 # main function
 if __name__ == '__main__':
@@ -60,7 +63,7 @@ if __name__ == '__main__':
         nameFile = sys.argv[1]
         file = open(nameFile, "r")
     except FileNotFoundError:
-        print("ERROR 1")
+        print("ERROR")
     else:
         # reading the file
         for lines in file.readlines():
@@ -74,10 +77,10 @@ if __name__ == '__main__':
                     borneInf = tab[1]
                     borneSup = tab[2]
                     nbPas = tab[3]
-                    print(ex07(f, borneInf, borneSup, nbPas))
+                    print(tabuler(f, borneInf, borneSup, nbPas))
             except ValueError:
-                print("ERROR 2")
+                print("ERROR")
             except Exception:
-                print("ERROR 3")
+                print("ERROR")
         # close file INPUT.txt
         file.close()

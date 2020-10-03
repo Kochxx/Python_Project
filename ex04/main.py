@@ -18,7 +18,7 @@ import math
 import sys
 
 
-def ex04(self, a, b):
+def secure(a, b):
     """
     ..function:: Function that verifies the pressure and volume passed
                  in parameter according to defined thresholds and returns the instructions
@@ -46,7 +46,7 @@ def ex04(self, a, b):
                 else:
                     res = "OK"
         return res
-    except Exception :
+    except Exception:
         print("ERROR")
 
 
@@ -76,7 +76,7 @@ if __name__ == '__main__':
             else:
                 try:
                     # print the instruction for the given volume and pressure
-                    print(ex04(a, b))
+                    print(secure(a, b))
                 except Exception:
                     print("ERROR")
         # close file

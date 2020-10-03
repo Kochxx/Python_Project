@@ -10,8 +10,7 @@ import math
 import sys
 
 
-#class ex02:
-def ex02(self, a):
+def squareRoot(a):
     """
     ..function:: Function that returns the square root of a float 'a' passed as parameter
 
@@ -39,14 +38,13 @@ if __name__ == '__main__':
     except FileNotFoundError:
         print("ERROR")
     else:
-        ex2 = ex02()
         # reading the file
         for lines in file.readlines():
             try:
                 # recovers the number of the line in the form of a float
                 number = float(lines)
-                # print the square root with 2 digits after the decimal point
-                print('{:.2f}'.format(ex2.ex02(number)))
+                # print the square root with 8 digits after the decimal point
+                print('{:.8f}'.format(squareRoot(number)))
             except ValueError:
                 print("ERROR")
         # close file INPUT.txt

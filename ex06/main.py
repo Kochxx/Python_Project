@@ -13,7 +13,7 @@ import math
 import sys
 
 
-def cube(self, a):
+def cube(a):
     """
     ..function: Function that returns the cube of a number passed in parameter
 
@@ -29,7 +29,8 @@ def cube(self, a):
     except Exception:
         raise Exception
 
-def ex06(self, a):
+
+def vSphere(a):
     """
     ..function: Function calculates the volume of a sphere of radius passed in parameter
 
@@ -40,7 +41,7 @@ def ex06(self, a):
     r = a
     try:
         # volume sphere calculation
-        res = 4 * math.pi * self.cube(r)
+        res = 4 * math.pi * cube(r)
         return res
     except Exception:
         print("ERROR")
@@ -55,7 +56,6 @@ if __name__ == '__main__':
     except FileNotFoundError:
         print("ERROR")
     else:
-        ex6 = ex06()
         # reading the file
         for lines in file.readlines():
             try:
@@ -66,7 +66,7 @@ if __name__ == '__main__':
             else:
                 try:
                     # print the volume of the sphere
-                    print(ex6.vSphere(number))
+                    print('{:.8f}'.format(vSphere(number)))
                 except Exception:
                     print("ERROR")
 

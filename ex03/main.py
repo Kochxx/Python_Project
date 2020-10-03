@@ -8,7 +8,7 @@ import sys
 
 
 # function that returns the smallest out of two words
-def ex03(a, b):
+def smallest(a, b):
     """
     ..function: function that returns the smallest out of two words
 
@@ -19,12 +19,13 @@ def ex03(a, b):
     """
     firstStr = a.lower()
     secondStr = b.lower()
-    if(firstStr == secondStr):
-    	return firstStr
-    elif (firstStr < secondStr):
-    	return firstStr
+    if firstStr == secondStr:
+        return firstStr
+    elif firstStr < secondStr:
+        return firstStr
     else:
-    	return secondStr
+        return secondStr
+
 
 # main function
 if __name__ == '__main__':
@@ -37,20 +38,20 @@ if __name__ == '__main__':
     else:
         # reading the file
         for lines in file.readlines():
-            try:                
-            	# retrieves the pair of words on the line currently read
+            try:
+                # retrieves the pair of words on the line currently read
                 tab = lines.split(";")
                 # checks the number of arguments and them being empty or not
                 if len(tab) != 2 or tab[0] == "" or tab[1] == "":
-                	print("ERROR")
-                	continue
+                    print("ERROR")
+                    continue
 
                 # stores both words in temporary variables for clarity
                 # rstrip() is used to strip trailing EOL messing with equality
                 firstWord = tab[0].rstrip()
                 secondWord = tab[1].rstrip()
                 # print the smallest word out of the two
-                print(ex03(firstWord, secondWord))
+                print(smallest(firstWord, secondWord))
             except ValueError:
                 print("ERROR")
             except Exception:
