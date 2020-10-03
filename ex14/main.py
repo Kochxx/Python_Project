@@ -13,9 +13,9 @@ import sys
 
 def ex14(self):
     """
-     ..function: Procedure that displays the values of y and z
+    ..function: Procedure that displays the values of y and z
 
-     """
+    """
     x = 23
     y = x + 5
     z = 42
