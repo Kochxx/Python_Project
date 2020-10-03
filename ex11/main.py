@@ -17,9 +17,12 @@ def sortList(firstString, secondString):
 
     :return the comprehension list 
     """
-    return ([firstElement + secondElement for firstElement in firstString for secondElement in secondString])
+    return [firstElement + secondElement for firstElement in firstString for secondElement in secondString]
 
 
 # main function
 if __name__ == '__main__':
-    print(sortList("abc","de"))
+    try:
+        print(sortList("abc", "de"))
+    except:
+        print("ERROR")

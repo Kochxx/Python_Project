@@ -15,16 +15,17 @@ class Vecteur2D:
     ..class:: Class with the name "Vecteur2D"
 
     """
-# init class
-def __init__(self, cX = 0.0, cY = 0.0):
-    """
-        ..function: Init class
 
-        :param cX: x coordinate
-        :param cY: y coordinate
-    """
-    self.x = cX
-    self.y = cY
+    # init class
+    def __init__(self, cX=0.0, cY=0.0):
+        """
+            ..function: Init class
+
+            :param cX: x coordinate
+            :param cY: y coordinate
+        """
+        self.x = cX
+        self.y = cY
 
 
 # main function
@@ -58,8 +59,8 @@ if __name__ == '__main__':
                     vecteur = Vecteur2D()
                     # instantiation with paramaters
                     vecteur2 = Vecteur2D(x, y)
-                    print("par défaut : (x=" + str(vecteur.x) + ", y=" + str(vecteur.y) + ")")
-                    print("instance : (x=" + str(vecteur2.x) + ", y=" + str(vecteur2.y) + ")")
+                    print("par défaut : (x=" + str('{:.8f}'.format(vecteur.x)) + ", y=" + str('{:.8f}'.format(vecteur.y)) + ")")
+                    print("instance : (x=" + str('{:.8f}'.format(vecteur2.x)) + ", y=" + str('{:.8f}'.format(vecteur2.y)) + ")")
 
                 except Exception:
                     print("ERROR")

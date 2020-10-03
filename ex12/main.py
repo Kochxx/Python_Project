@@ -13,7 +13,7 @@ import math
 import sys
 
 
-def getX(self):
+def getX():
     """
     ..function: Function that returns the set X
     
@@ -24,7 +24,8 @@ def getX(self):
 
     return X
 
-def getY(self):
+
+def getY():
     """
     ..function: Function that returns the set Y
     
@@ -34,7 +35,8 @@ def getY(self):
     Y = {'s', 'b', 'd'}
     return Y
 
-def setsInitial(self, a, b):
+
+def setsInitial(a, b):
     """
     ..function: Function that returns the display of the X and Y sets
 
@@ -65,15 +67,16 @@ def setsInitial(self, a, b):
         listX = sorted(listX)
 
         # enriched the table res
-        res.append("X : {'" + str(listX[0]) + "','" + str(listX[1]) + "', '" + str(listX[2]) + "', '" + str(listX[3]) + "'}")
-        res.append("Y : {'" + str(listY[0]) + "','" + str(listY[1]) + "', '" + str(listY[2]) + "'}")
+        res.append("X : {'" + str(listX[0]) + "', '" + str(listX[1]) + "', '" + str(listX[2]) + "', '" + str(listX[3]) + "'}")
+        res.append("Y : {'" + str(listY[0]) + "', '" + str(listY[1]) + "', '" + str(listY[2]) + "'}")
 
         # returns a string containing the display of the sets
         return res
     except Exception:
         raise Exception
 
-def appartenance(self, a, b):
+
+def appartenance(a, b):
     """
     ..function: Function which returns the display of the belonging operation
                 between the 2 sets passed in parameter
@@ -91,9 +94,9 @@ def appartenance(self, a, b):
     try:
         # checks the valour of the set
         if b == 'X':
-            f = self.getX()
+            f = getX()
         elif b == 'Y':
-            f = self.getY()
+            f = getY()
         else:
             raise ValueError
         # checks the character in the set
@@ -108,7 +111,8 @@ def appartenance(self, a, b):
     except ValueError:
         print("ERROR")
 
-def operation(self, a, b, c):
+
+def operation(a, b, c):
     """
     ..function: Function that returns the display of the operation
                 between two sets. The type of the operation,
@@ -124,16 +128,16 @@ def operation(self, a, b, c):
     res = {}
     # Init the first set
     if a == 'X':
-        ensemble1 = self.getX()
+        ensemble1 = getX()
     elif a == 'Y':
-        ensemble1 = self.getY()
+        ensemble1 = getY()
     else:
         raise ValueError
     # Init the second set
     if b == 'X':
-        ensemble2 = self.getX()
+        ensemble2 = getX()
     elif b == 'Y':
-        ensemble2 = self.getY()
+        ensemble2 = getY()
     else:
         raise ValueError
     # Realize operation in function of its type
@@ -173,16 +177,15 @@ if __name__ == '__main__':
         print("ERROR")
     else:
         try:
-            ex_12 = ex12()
-            tab = ex_12.setsInitial(ex_12.getX(), ex_12.getY())
+            tab = setsInitial(getX(), getY())
             print(tab[0])
             print(tab[1])
-            print(ex_12.appartenance('c', 'X')[0])
-            print(ex_12.appartenance('a', 'Y')[0])
-            print(ex_12.operation('X', 'Y', '-'))
-            print(ex_12.operation('Y', 'X', '-'))
-            print(ex_12.operation('X', 'Y', 'union'))
-            print(ex_12.operation('X', 'Y', 'inter'))
+            print(appartenance('c', 'X')[0])
+            print(appartenance('a', 'Y')[0])
+            print(operation('X', 'Y', '-'))
+            print(operation('Y', 'X', '-'))
+            print(operation('X', 'Y', 'union'))
+            print(operation('X', 'Y', 'inter'))
 
         except Exception:
             print("ERROR")

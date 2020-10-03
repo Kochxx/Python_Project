@@ -14,44 +14,44 @@ class Vecteur2D:
     ..class:: Class contains the function for the exercise 16
 
     """
-def __init__(self, cX=0.0, cY=0.0, n=0):
-    """
-    ..function: init class
+    def __init__(self, cX=0.0, cY=0.0, n=0):
+        """
+        ..function: init class
 
-    :param cX: x coordinate
-    :param cY: y coordinate
-    :param n: number to define the type of vector ( the vector 1, 2 or the somme of the add function)
-    """
-    # x coordinate
-    self.x = cX
-    # y coordinate
-    self.y = cY
-    # number to define the type of vector ( the vector 1, 2 or the somme of the add function)
-    self.num = n
+        :param cX: x coordinate
+        :param cY: y coordinate
+        :param n: number to define the type of vector ( the vector 1, 2 or the somme of the add function)
+        """
+        # x coordinate
+        self.x = cX
+        # y coordinate
+        self.y = cY
+        # number to define the type of vector ( the vector 1, 2 or the somme of the add function)
+        self.num = n
 
-def ex16(self):
-    """
-    ..function: displays vector
-    """
-    # print the vector like vector 1
-    if self.num == 0:
-        print("v1 : (x=" + str(self.x) + ", y=" + str(self.y) + ")")
-    # print the vector like vector 'somme'
-    elif self.num == -1:
-        print("somme : (x=" + str(self.x) + ", y=" + str(self.y) + ")")
-    else:
-        # print the vector like other vector
-        print("v" + str(self.num) + " : (x=" + str(self.x) + ", y=" + str(self.y) + ")")
+    def affichage(self):
+        """
+        ..function: displays vector
+        """
+        # print the vector like vector 1
+        if self.num == 0:
+            print("v1 : (x=" + str(self.x) + ", y=" + str(self.y) + ")")
+        # print the vector like vector 'somme'
+        elif self.num == -1:
+            print("somme : (x=" + str(self.x) + ", y=" + str(self.y) + ")")
+        else:
+            # print the vector like other vector
+            print("v" + str(self.num) + " : (x=" + str(self.x) + ", y=" + str(self.y) + ")")
 
-def __add__(self, v2):
-    """
-    ..function: Function that adds two vectors
-    :param v2: vector 2 to add
+    def __add__(self, v2):
+        """
+        ..function: Function that adds two vectors
+        :param v2: vector 2 to add
 
-    """
-    self.x = self.x + v2.x
-    self.y = self.y + v2.y
-    self.num = -1
+        """
+        self.x = self.x + v2.x
+        self.y = self.y + v2.y
+        self.num = -1
 
 
 # main function

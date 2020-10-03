@@ -12,8 +12,8 @@ class Test(unittest.TestCase):
         ..function:: Test function comprehensionList()
         """
         print("Test Comprehension List")
-        test1 = main.exo10()
-        self.assertEqual(test1.comprehensionList(), [5, 6, 7, 8])
+        self.assertEqual(main.comprehensionList(), [5, 6, 7, 8])
+        self.assertEqual(main.comprehensionList()[0], 5)
 
 
 if __name__ == '__main__':

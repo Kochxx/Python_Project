@@ -10,7 +10,7 @@ import sys
 from typing import List
 
 
-def ex10(self):
+def comprehensionList():
     """
     ..function: Function that returns a comprehension list that adds 3
                 to each item in a list from 0 to 5
@@ -40,8 +40,7 @@ if __name__ == '__main__':
         print("ERROR")
     else:
         try:
-            exo10 = ex10()
             # displays the comprehension list
-            print(exo10.comprehensionList())
+            print(comprehensionList())
         except Exception:
             print("ERROR")

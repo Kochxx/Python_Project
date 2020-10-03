@@ -11,15 +11,22 @@ import math
 import sys
 
 
-def ex14(self):
+class MaClasse:
     """
-    ..function: Procedure that displays the values of y and z
+    ..class:: Class with the name "MaClasse"
 
     """
     x = 23
     y = x + 5
-    z = 42
-    print("(" + str(self.y) + ", " + str(z) + ")")
+
+    def affiche(self):
+        """
+        ..function: Function that returns the values of y and z
+
+        """
+        z = 42
+        res = ("(" + str(self.y) + ", " + str(z) + ")")
+        return res
 
 
 # main function
@@ -34,7 +41,7 @@ if __name__ == '__main__':
             # instantiation of an object of the MyClasse class
             objet = MaClasse()
             # invocation of the object's function 'affiche'
-            objet.affiche()
+            print(objet.affiche())
         except Exception:
             print("ERROR")
 
