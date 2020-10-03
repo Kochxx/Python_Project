@@ -7,7 +7,7 @@ class Test(unittest.TestCase):
     # test the value error
     def testRaiseValueTypeError(self):
         print("testRaiseValueTypeError")
-        self.assertRaises(ValueError, main.smallest, -8.5, 5)
+        self.assertRaises(AttributeError, main.smallest, -8.5, 5)
         print("Incorrect value => expected value string")
 
     def testASmallerThanB(self):
