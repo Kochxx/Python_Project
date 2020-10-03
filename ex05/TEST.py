@@ -14,7 +14,7 @@ class Test(unittest.TestCase):
     # test the value with start higher than end
     def testEndSmallerThanStart(self):
         print("testEndSmallerThanStart")
-        self.assertRaises(ValueError, main.printRange(2, 0, 1))
+        self.assertRaises(TypeError, main.printRange(2, 0, 1))
 
     # test the value with step set to zero
     def testEndStepToZero(self):
@@ -24,7 +24,7 @@ class Test(unittest.TestCase):
     # test the value with negative step
     def testEndStepNegative(self):
         print("testEndStepNegative")
-        self.assertRaises(ValueError, main.printRange(2, 0, -1))
+        self.assertRaises(TypeError, main.printRange(2, 0, -1))
 
     # test the value with all set to zero 
     def testEndAllSetToZero(self):

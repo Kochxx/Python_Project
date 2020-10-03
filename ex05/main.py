@@ -18,11 +18,14 @@ def printRange(start, end, a):
     
     :return res: list of integer matching condition
     """
-    x = range(start, end, a)
-    res = []
-    for n in x:
-        res.append(n)
-    return res
+    try:
+        x = range(start, end, a)
+        res = []
+        for n in x:
+            res.append(n)
+        return res
+    except:
+        raise ValueError
 
 
 # main function
